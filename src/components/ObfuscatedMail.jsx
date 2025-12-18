@@ -1,24 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export const ObfuscatedMail = ({ email, className, children, title }) => {
-  // Start with a dummy link so bots don't see 'mailto:'
-  const [href, setHref] = useState("#");
-
-  // Only reveal the real email when the user hovers or focuses
-  const reveal = () => {
-    setHref(`mailto:${email}`);
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.location.href = `mailto:${email}`;
   };
 
   return (
-    <a
-      href={href}
-      onMouseEnter={reveal}
-      onFocus={reveal}
-      onClick={reveal}
+    <button
+      onClick={handleClick}
       className={className}
       title={title || "Send email"}
+      type="button"
     >
       {children}
-    </a>
+    </button>
   );
 };

@@ -19,12 +19,11 @@ export const Hero = () => {
         </motion.div>
         
         <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
-          {/* Obfuscated Title Link */}
-          <ObfuscatedMail email={rawEmail} className="block cursor-pointer hover:opacity-80 transition-opacity duration-300">
-            <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6">
+          <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6">
+            <ObfuscatedMail email={rawEmail} className="cursor-pointer hover:opacity-80 transition-opacity duration-300 bg-transparent border-none p-0 font-extrabold tracking-tighter text-4xl md:text-7xl text-white">
               LIQUID <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00A3FF] to-cyan-200">DEVELOPMENT</span>
-            </h1>
-          </ObfuscatedMail>
+            </ObfuscatedMail>
+          </h1>
         </motion.div>
 
         <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }} className="text-lg md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto font-light">German Development Team</motion.p>
