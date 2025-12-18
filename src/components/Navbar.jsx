@@ -13,7 +13,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <BrandLogo className="w-8 h-8 text-[#00A3FF]" />
-          <span className="font-bold text-lg md:text-xl tracking-wider text-white">LIQUID<span className="text-[#00A3FF]">DEVELOPMENT</span></span>
+          <span className="font-bold text-lg md:text-xl tracking-wider text-white">LIQUID <span className="text-[#00A3FF]">DEVELOPMENT</span></span>
         </div>
         <div className="hidden md:flex gap-6 text-sm font-medium text-gray-300 items-center">
           {NAV_LINKS.map((item) => (
