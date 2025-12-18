@@ -26,7 +26,7 @@ export const Hero = () => {
           </h1>
         </motion.div>
 
-        <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }} className="text-lg md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto font-light">German Development Team</motion.p>
+        <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }} className="text-lg md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto font-light">Open-source software development team</motion.p>
         
         <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.6 }} className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <a href="#projects" className="px-8 py-3 rounded-full border border-[#00A3FF] hover:bg-[#00A3FF]/10 text-white font-bold transition-all flex items-center justify-center gap-2">

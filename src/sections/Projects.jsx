@@ -14,7 +14,7 @@ export const Projects = () => (
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">GameTracker App</h3>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">An all-in-one app to track card- and board games, manage players and groups and get statistics about your played games.</p>
             <div className="flex flex-wrap gap-2 mb-8">{['Flutter', 'iOS', 'Android', 'Statistics'].map(tag => (<span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm text-gray-400">{tag}</span>))}</div>
-            <a href="https://github.com/LiquidDevelopmentDE/game-tracker" target="_blank" rel="noreferrer" className="inline-flex items-center text-white font-semibold hover:text-[#00A3FF] transition-colors group">View Project Status <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} /></a>
+            <a href="https://github.com/LiquidDevelopmentDE/game-tracker" target="_blank" rel="noreferrer" className="inline-flex items-center text-white font-semibold hover:text-[#00A3FF] transition-colors group">View Project Repository <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} /></a>
           </div>
           <div className="relative h-[460px] bg-gradient-to-br from-gray-900 to-black rounded-xl border border-white/10 flex items-center justify-center overflow-hidden group">
              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
