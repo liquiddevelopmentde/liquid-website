@@ -9,7 +9,7 @@ export const SOCIALS = [
         icon: Github
     },
     {
-        name: "Email",
+        name: "E-Mail",
         link: "hello@liquid-dev.de",
         icon: Mail
     }
