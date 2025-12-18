@@ -1,6 +1,6 @@
 import React from 'react';
-import {Github, Mail} from 'lucide-react';
 import {BrandLogo} from './BrandLogo';
+import {ObfuscatedMail} from './ObfuscatedMail';
 import {SOCIALS} from '../data/content';
 
 export const Footer = () => (
@@ -11,16 +11,36 @@ export const Footer = () => (
                 <span className="font-bold text-gray-500">LIQUID DEVELOPMENT</span>
             </div>
             <div className="flex gap-8">
-                <a href={SOCIALS.github}
-                   className="text-gray-400 hover:text-[#00A3FF] transition-colors"
-                >
-                    <Github size={24}/>
-                </a>
-                <a href={SOCIALS.email}
-                   className="text-gray-400 hover:text-[#00A3FF] transition-colors"
-                >
-                    <Mail size={24}/>
-                </a>
+                {SOCIALS.map((social) => {
+                    const Icon = social.icon;
+                    const isEmail = !social.link.startsWith('http');
+
+                    if (isEmail) {
+                        return (
+                            <ObfuscatedMail
+                                key={social.name}
+                                email={social.link}
+                                className="text-gray-400 hover:text-[#00A3FF] transition-colors"
+                                title={social.name}
+                            >
+                                <Icon size={24}/>
+                            </ObfuscatedMail>
+                        );
+                    }
+
+                    return (
+                        <a
+                            key={social.name}
+                            href={social.link}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-gray-400 hover:text-[#00A3FF] transition-colors"
+                            title={social.name}
+                        >
+                            <Icon size={24}/>
+                        </a>
+                    );
+                })}
             </div>
         </div>
         <div className="text-center mt-8 text-gray-600 text-sm">&copy; {new Date().getFullYear()} Liquid Development.

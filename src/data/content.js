@@ -1,9 +1,19 @@
+import { Github, Mail } from 'lucide-react';
+
 export const NAV_LINKS = ['Home', 'Projects', 'Team'];
 
-export const SOCIALS = {
-    github: "https://github.com/LiquidDevelopmentDE/",
-    email: "mailto:hello@liquid-dev.de"
-};
+export const SOCIALS = [
+    {
+        name: "GitHub",
+        link: "https://github.com/LiquidDevelopmentDE/",
+        icon: Github
+    },
+    {
+        name: "Email",
+        link: "hello@liquid-dev.de",
+        icon: Mail
+    }
+];
 
 export const TEAM_MEMBERS = [
     {

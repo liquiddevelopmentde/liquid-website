@@ -7,7 +7,8 @@ import {ObfuscatedMail} from '../components/ObfuscatedMail';
 import {SOCIALS} from '../data/content';
 
 export const Hero = () => {
-    const rawEmail = SOCIALS.email.replace('mailto:', '');
+    const emailSocial = SOCIALS.find(s => !s.link.startsWith('http'));
+    const rawEmail = emailSocial ? emailSocial.link : 'hello@liquid-dev.de';
 
     return (
         <section id="home" className="relative h-screen flex items-center justify-center pt-20 overflow-hidden"
