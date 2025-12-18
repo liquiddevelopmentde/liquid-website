@@ -1,0 +1,7 @@
+services:
+  liquid-web:
+    build: .
+    container_name: liquid-website
+    restart: unless-stopped
+    ports:
+      - "8081:80"
