@@ -38,8 +38,8 @@ export const TEAM_MEMBERS = [
         name: "Mathis",
         nickname: "Sneeex",
         roles: [0, 1],
-        img: "https://github.com/mathiskir.png",
-        gh: "https://github.com/mathiskir",
+        img: "https://github.com/sneeex.png",
+        gh: "https://github.com/sneeex",
         email: "mathis@liquid-dev.de",
         website: "https://mathiskirchner.de"
     }
