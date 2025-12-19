@@ -47,6 +47,6 @@ export const TEAM_MEMBERS = [
 
 
 export const ROLES = [
-    {id: 0, role: "FOUNDER", bgColor: "#00A3FF", borderColor: "#00A3FF", textColor: "#00A3FF"},
-    {id: 1, role: "DEVELOPER", bgColor: "#3b82f6", borderColor: "#3b82f6", textColor: "#93c5fd"},
+    {id: 0, role: "FOUNDER", bgColor: "#1e40af", borderColor: "#1e40af", textColor: "#60a5fa"},
+    {id: 1, role: "DEVELOPER", bgColor: "#0284c7", borderColor: "#0284c7", textColor: "#00b8f9"},
 ];
