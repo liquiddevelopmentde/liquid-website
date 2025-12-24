@@ -4,7 +4,7 @@ import {Github, Mail, Globe} from 'lucide-react';
 import {ObfuscatedMail} from './ObfuscatedMail';
 import {ROLES} from '../data/content';
 
-export const TeamMember = ({name, nickname, img, gh, email, website, roles}) => (
+export const TeamMember = ({name, nickname, imageLink, githubLink, email, website, roles}) => (
     <motion.div whileHover={{y: -5}}
                 className="group relative bg-[#121212] rounded-2xl p-6 border border-white/10 flex flex-col items-center text-center overflow-hidden shadow-lg hover:border-[#00A3FF]/40 transition-all duration-300">
         <div
@@ -18,7 +18,7 @@ export const TeamMember = ({name, nickname, img, gh, email, website, roles}) => 
 
         <div
             className="w-28 h-28 rounded-full mb-5 p-1 border-2 border-[#00A3FF]/30 group-hover:border-[#00A3FF] transition-colors relative z-10">
-            <img src={img} alt={name} className="w-full h-full rounded-full object-cover bg-gray-800"/>
+            <img src={imageLink} alt={name} className="w-full h-full rounded-full object-cover bg-gray-800"/>
         </div>
 
         <div className="relative z-10 w-full">
@@ -55,7 +55,7 @@ export const TeamMember = ({name, nickname, img, gh, email, website, roles}) => 
                     <Mail size={18}/>
                 </ObfuscatedMail>
 
-                <a href={gh} target="_blank" rel="noreferrer"
+                <a href={githubLink} target="_blank" rel="noreferrer"
                    className="flex-1 py-2 rounded-lg bg-white/5 hover:bg-[#00A3FF] hover:text-white text-gray-400 transition-all flex justify-center items-center"
                    title="GitHub">
                     <Github size={18}/>

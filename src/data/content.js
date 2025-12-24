@@ -20,8 +20,8 @@ export const TEAM_MEMBERS = [
         name: "Felix",
         nickname: "Flixcoo",
         roles: [0, 1],
-        img: "https://github.com/flixcoo.png",
-        gh: "https://github.com/flixcoo",
+        imageLink: "https://github.com/flixcoo.png",
+        githubLink: "https://github.com/flixcoo",
         email: "felix@liquid-dev.de",
         website: "https://felixkirchner.de"
     },
@@ -29,8 +29,8 @@ export const TEAM_MEMBERS = [
         name: "Yannick",
         nickname: "Gelbeinhalb",
         roles: [0, 1],
-        img: "https://github.com/GelbEinhalb.png",
-        gh: "https://github.com/GelbEinhalb",
+        imageLink: "https://github.com/GelbEinhalb.png",
+        githubLink: "https://github.com/GelbEinhalb",
         email: "yannick@liquid-dev.de",
         website: "https://yannick-weigert.de"
     },
@@ -38,8 +38,8 @@ export const TEAM_MEMBERS = [
         name: "Mathis",
         nickname: "Sneeex",
         roles: [0, 1],
-        img: "https://github.com/sneeex.png",
-        gh: "https://github.com/sneeex",
+        imageLink: "https://github.com/sneeex.png",
+        githubLink: "https://github.com/sneeex",
         email: "mathis@liquid-dev.de",
         website: "https://mathiskirchner.de"
     }
