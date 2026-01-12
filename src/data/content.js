@@ -1,12 +1,18 @@
 import { Github, Mail } from 'lucide-react';
+    import { FaDiscord } from 'react-icons/fa';
 
 export const NAV_LINKS = ['Home', 'Projects', 'Team'];
 
 export const SOCIALS = [
     {
         name: "GitHub",
-        link: "https://github.com/LiquidDevelopmentDE/",
+        link: "https://github.liquid-dev.de",
         icon: Github
+    },
+    {
+        name: "Discord",
+        link: "https://discord.liquid-dev.de",
+        icon: FaDiscord
     },
     {
         name: "E-Mail",
