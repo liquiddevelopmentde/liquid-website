@@ -5,6 +5,7 @@ import {Hero} from './sections/Hero';
 import {Projects} from './sections/Projects';
 import {Team} from './sections/Team';
 import Snowfall from 'react-snowfall'
+import { DateTime } from 'luxon';
 
 export default function LiquidDevelopment() {
     return (
@@ -19,9 +20,12 @@ export default function LiquidDevelopment() {
                 pointerEvents: 'none',
                 zIndex: 9999,
             }}>
-                <Snowfall
-                    snowflakeCount={80}
-                />
+                {(() => {
+                    const now = DateTime.now();
+                    return (now.month === 11 && now.day >= 15) ||
+                        (now.month === 12) ||
+                        (now.month === 1);
+                })() && <Snowfall snowflakeCount={80} />}
             </div>
 
             <Navbar/>
