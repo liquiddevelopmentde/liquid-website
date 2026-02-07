@@ -7,6 +7,7 @@ import {Team} from './sections/Team';
 import Snowfall from 'react-snowfall'
 import { DateTime } from 'luxon';
 
+// Determines if the current date is within the snowfall season (November 15th to January 31st)
 function isSnowfallSeason(date = DateTime.now()) {
     const year = date.year;
     const start = DateTime.local(year, 11, 15);
