@@ -7,6 +7,19 @@ import {Team} from './sections/Team';
 import Snowfall from 'react-snowfall'
 import { DateTime } from 'luxon';
 
+function isSnowfallSeason(date = DateTime.now()) {
+    const year = date.year;
+    const start = DateTime.local(year, 11, 15);
+    const end = DateTime.local(year + 1, 1, 31);
+    // If we're on or after November 15th, check if we're before January 31st of the next year
+    if (date >= start) {
+        return date <= end;
+    }
+    // If we're before November 15th, check if we're after January 1st of the current year
+    const prevEnd = DateTime.local(year, 1, 31);
+    return date <= prevEnd;
+}
+
 export default function LiquidDevelopment() {
     return (
         <div
@@ -20,12 +33,7 @@ export default function LiquidDevelopment() {
                 pointerEvents: 'none',
                 zIndex: 9999,
             }}>
-                {(() => {
-                    const now = DateTime.now();
-                    return (now.month === 11 && now.day >= 15) ||
-                        (now.month === 12) ||
-                        (now.month === 1);
-                })() && <Snowfall snowflakeCount={80} />}
+                {isSnowfallSeason() && <Snowfall snowflakeCount={80} />}
             </div>
 
             <Navbar/>
