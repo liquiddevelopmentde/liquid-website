@@ -21,15 +21,6 @@ function isSnowfallSeason(date = DateTime.now()) {
     return date <= prevEnd;
 }
 
-// Gibt alle 10 Sekunden einen anderen Boolean zurück, basierend auf der aktuellen Sekunde
-function isTenSecondInterval() {
-    const seconds = DateTime.now().second;
-    // true für 0-9, 20-29, 40-49; false sonst
-    return (seconds >= 0 && seconds < 10) || (seconds >= 20 && seconds < 30) || (seconds >= 40 && seconds < 50);
-}
-
-
-
 export default function LiquidDevelopment() {
     return (
         <div
@@ -43,7 +34,7 @@ export default function LiquidDevelopment() {
                 pointerEvents: 'none',
                 zIndex: 9999,
             }}>
-                {isTenSecondInterval() && <Snowfall snowflakeCount={80} />}
+                {isSnowfallSeason() && <Snowfall snowflakeCount={80} />}
             </div>
 
             <Navbar/>
