@@ -27,9 +27,9 @@ export const Hero = () => {
 
             <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
                 <motion.div
-                    initial={{scale: 0.8, opacity: 0}}
+                    initial={{scale: 0.5, opacity: 0}}
                     animate={{scale: 1, opacity: 1}}
-                    transition={{duration: 0.8}}
+                    transition={{duration: 0.5}}
                     className="mx-auto mb-8 w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#00A3FF]/5 flex items-center justify-center border border-[#00A3FF]/30 shadow-[0_0_60px_-10px_rgba(0,163,255,0.4)]"
                 >
                     <BrandLogo className="w-14 h-14 md:w-20 md:h-20 text-[#00A3FF]"/>
