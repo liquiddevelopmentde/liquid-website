@@ -41,15 +41,10 @@ export const Hero = () => {
                     transition={{ delay: 0.2 }}
                 >
                     <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6">
-                        <ObfuscatedMail
-                            email={rawEmail}
-                            className="cursor-pointer hover:opacity-80 transition-opacity duration-300 bg-transparent border-none p-0 font-extrabold tracking-tighter text-4xl md:text-7xl text-white"
-                        >
                             LIQUID
                             <span className="ml-3 text-transparent bg-clip-text bg-gradient-to-r from-[#00A3FF] to-cyan-200">
                                 DEVELOPMENT
                             </span>
-                        </ObfuscatedMail>
                     </h1>
                 </motion.div>
 
