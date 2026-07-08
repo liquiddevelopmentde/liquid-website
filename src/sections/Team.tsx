@@ -1,7 +1,6 @@
-import React from 'react';
-import {FadeInWhenVisible} from '../utils/animations';
-import {TeamMember} from '../components/TeamMember';
-import {TEAM_MEMBERS} from '../data/content';
+import {FadeInWhenVisible} from '../utils/animations.tsx';
+import {TeamMemberCard} from '../components/TeamMember.tsx';
+import {TEAM_MEMBERS} from '../data/content.ts';
 
 export const Team = () => (
     <section id="team" className="py-24 relative z-10 bg-gradient-to-b from-[#050505] to-black">
@@ -17,7 +16,7 @@ export const Team = () => (
             <div className="grid md:grid-cols-3 gap-8 justify-center max-w-5xl mx-auto">
                 {TEAM_MEMBERS.map((member, index) => (
                     <FadeInWhenVisible key={member.name} delay={0.1 * (index + 1)}>
-                        <TeamMember {...member} />
+                        <TeamMemberCard {...member} />
                     </FadeInWhenVisible>
                 ))}
             </div>

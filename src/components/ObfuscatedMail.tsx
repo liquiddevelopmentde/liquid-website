@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-export const ObfuscatedMail = ({email, className, children, title}) => {
-    const handleClick = (e) => {
+export const ObfuscatedMail = ({email, className, children, title}: {email: string, className?: string, children: React.ReactNode, title?: string}) => {
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         window.location.href = `mailto:${email}`;
     };

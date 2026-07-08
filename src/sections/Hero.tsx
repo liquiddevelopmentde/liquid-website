@@ -1,10 +1,9 @@
-import React from 'react';
 import {motion} from 'framer-motion';
 import {ArrowRight} from 'lucide-react';
-import {BrandLogo} from '../components/BrandLogo';
-import {Bubbles} from '../components/Bubbles';
-import {ObfuscatedMail} from '../components/ObfuscatedMail';
-import {SOCIALS} from '../data/content';
+import {BrandLogo} from '../components/BrandLogo.tsx';
+import {Bubbles} from '../components/Bubbles.tsx';
+import {ObfuscatedMail} from '../components/ObfuscatedMail.tsx';
+import {SOCIALS} from '../data/content.ts';
 
 export const Hero = () => {
     const emailSocial = SOCIALS.find(s => !s.link.startsWith('http'));
@@ -65,7 +64,7 @@ export const Hero = () => {
                     className="flex flex-col sm:flex-row gap-6 justify-center items-center"
                 >
                     <a
-                        href="#projects"
+                        href={"#projects"}
                         className="px-8 py-3 rounded-full border border-[#00A3FF] hover:bg-[#00A3FF]/10 text-white font-bold transition-all flex items-center justify-center gap-2"
                     >
                         Explore Work

@@ -1,9 +1,10 @@
 import { Github, Mail } from 'lucide-react';
     import { FaDiscord } from 'react-icons/fa';
+import type {Role, SocialIcon, TeamMember} from "./types.ts";
 
 export const NAV_LINKS = ['Home', 'Projects', 'Team'];
 
-export const SOCIALS = [
+export const SOCIALS : SocialIcon[] = [
     {
         name: "GitHub",
         link: "https://github.liquid-dev.de",
@@ -21,7 +22,7 @@ export const SOCIALS = [
     }
 ];
 
-export const TEAM_MEMBERS = [
+export const TEAM_MEMBERS: TeamMember[] = [
     {
         name: "Felix",
         nickname: "Flixcoo",
@@ -52,7 +53,7 @@ export const TEAM_MEMBERS = [
 ];
 
 
-export const ROLES = [
+export const ROLES: Role[] = [
     {id: 0, role: "FOUNDER", bgColor: "#1e40af", borderColor: "#1e40af", textColor: "#60a5fa"},
     {id: 1, role: "DEVELOPER", bgColor: "#0284c7", borderColor: "#0284c7", textColor: "#00b8f9"},
 ];

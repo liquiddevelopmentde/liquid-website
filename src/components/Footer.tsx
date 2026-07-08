@@ -1,7 +1,7 @@
-import React from 'react';
-import {BrandLogo} from './BrandLogo';
-import {ObfuscatedMail} from './ObfuscatedMail';
-import {SOCIALS} from '../data/content';
+import {BrandLogo} from './BrandLogo.tsx';
+import {ObfuscatedMail} from "./ObfuscatedMail.tsx";
+import {SOCIALS} from "../data/content.ts";
+
 
 export const Footer = () => (
     <footer id="contact" className="py-12 border-t border-white/10 bg-black relative overflow-hidden">

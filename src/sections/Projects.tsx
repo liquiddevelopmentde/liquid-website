@@ -1,6 +1,5 @@
-import React from 'react';
 import {ArrowRight, Smartphone} from 'lucide-react';
-import {FadeInWhenVisible} from '../utils/animations';
+import {FadeInWhenVisible} from '../utils/animations.tsx';
 
 export const Projects = () => (
     <section id="projects" className="py-32 relative z-10 bg-gradient-to-b from-[#0e0e0e] to-[#050505] overflow-hidden">

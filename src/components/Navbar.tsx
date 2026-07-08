@@ -1,7 +1,7 @@
-import React from 'react';
-import {BrandLogo} from './BrandLogo';
-import {ObfuscatedMail} from './ObfuscatedMail';
-import {NAV_LINKS, SOCIALS} from '../data/content';
+import {BrandLogo} from './BrandLogo.tsx';
+import {NAV_LINKS, SOCIALS} from "../data/content.ts";
+import {ObfuscatedMail} from "./ObfuscatedMail.tsx";
+
 
 export const Navbar = () => {
     return (

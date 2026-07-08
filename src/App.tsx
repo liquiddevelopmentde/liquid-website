@@ -1,23 +1,22 @@
-import React from 'react';
-import {Navbar} from './components/Navbar';
-import {Footer} from './components/Footer';
-import {Hero} from './sections/Hero';
-import {Projects} from './sections/Projects';
-import {Team} from './sections/Team';
+import {Navbar} from './components/Navbar.tsx';
+import {Footer} from './components/Footer.tsx';
+
 import Snowfall from 'react-snowfall'
-import { DateTime } from 'luxon';
+import {Hero} from "./sections/Hero.tsx";
+import {Projects} from "./sections/Projects.tsx";
+import {Team} from "./sections/Team.tsx";
 
 // Determines if the current date is within the snowfall season (November 15th to January 31st)
-function isSnowfallSeason(date = DateTime.now()) {
-    const year = date.year;
-    const start = DateTime.local(year, 11, 15);
-    const end = DateTime.local(year + 1, 1, 31);
+function isSnowfallSeason(date = new Date()) {
+    const year = date.getFullYear();
+    const start = new Date(year, 10, 15); // November 15th
+    const end = new Date(year + 1, 0, 31); // January 31st of the next year
     // If we're on or after November 15th, check if we're before January 31st of the next year
     if (date >= start) {
         return date <= end;
     }
     // If we're before November 15th, check if we're after January 1st of the current year
-    const prevEnd = DateTime.local(year, 1, 31);
+    const prevEnd = new Date(year, 0, 31);
     return date <= prevEnd;
 }
 
@@ -38,9 +37,7 @@ export default function LiquidDevelopment() {
             </div>
 
             <Navbar/>
-
             <Hero/>
-
             <Projects/>
             <Team/>
             <Footer/>

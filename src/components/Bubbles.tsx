@@ -1,13 +1,12 @@
-import React from 'react';
 import {motion} from 'framer-motion';
 
 export const Bubbles = () => {
-    const sizes = [20, 40, 60, 80];
+    const sizes: number[] = [20, 40, 60, 80];
 
     return (
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
             {Array.from({length: 15}).map((_, i) => {
-                const size = sizes[i % sizes.length];
+                const size = sizes[i % sizes.length]!;
 
                 return (
                     <motion.div
