@@ -23,7 +23,7 @@ function isSnowfallSeason(date = new Date()) {
 export default function LiquidDevelopment() {
     return (
         <div
-            className="min-h-screen bg-[#0e0e0e] text-white font-sans selection:bg-[#00A3FF] selection:text-white overflow-x-hidden">
+            className="min-h-screen overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
             <div style={{
                 position: 'fixed',
                 width: '100vw',

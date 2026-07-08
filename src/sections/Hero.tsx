@@ -12,7 +12,7 @@ export const Hero = () => {
     return (
         <section
             id="home"
-            className="relative h-screen flex items-center justify-center pt-20 overflow-hidden"
+            className="relative flex h-screen items-center justify-center overflow-hidden pt-20"
         >
             <div
                 className="absolute inset-0 opacity-10"
@@ -24,14 +24,14 @@ export const Hero = () => {
 
             <Bubbles/>
 
-            <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+            <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
                 <motion.div
                     initial={{scale: 0.5, opacity: 0}}
                     animate={{scale: 1, opacity: 1}}
                     transition={{duration: 0.5}}
-                    className="mx-auto mb-8 w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#00A3FF]/5 flex items-center justify-center border border-[#00A3FF]/30 shadow-[0_0_60px_-10px_rgba(0,163,255,0.4)]"
+                    className="mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-[#00A3FF]/30 bg-[#00A3FF]/5 shadow-[0_0_60px_-10px_rgba(0,163,255,0.4)] md:h-32 md:w-32"
                 >
-                    <BrandLogo className="w-14 h-14 md:w-20 md:h-20 text-[#00A3FF]"/>
+                    <BrandLogo className="h-14 w-14 text-[#00A3FF] md:h-20 md:w-20"/>
                 </motion.div>
 
                 <motion.div
@@ -39,10 +39,10 @@ export const Hero = () => {
                     animate={{y: 0, opacity: 1}}
                     transition={{delay: 0.2}}
                 >
-                    <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6">
+                    <h1 className="mb-6 text-4xl font-extrabold tracking-tighter md:text-7xl">
                         LIQUID
                         <span
-                            className="ml-3 text-transparent bg-clip-text bg-gradient-to-r from-[#00A3FF] to-cyan-200">
+                            className="ml-3 bg-gradient-to-r from-[#00A3FF] to-cyan-200 bg-clip-text text-transparent">
                                 DEVELOPMENT
                         </span>
                     </h1>
@@ -52,7 +52,7 @@ export const Hero = () => {
                     initial={{y: 20, opacity: 0}}
                     animate={{y: 0, opacity: 1}}
                     transition={{delay: 0.4}}
-                    className="text-lg md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto font-light"
+                    className="mx-auto mb-10 max-w-2xl text-lg font-light text-gray-400 md:text-2xl"
                 >
                     Open-source software development team
                 </motion.p>
@@ -61,23 +61,23 @@ export const Hero = () => {
                     initial={{y: 20, opacity: 0}}
                     animate={{y: 0, opacity: 1}}
                     transition={{delay: 0.6}}
-                    className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+                    className="flex flex-col items-center justify-center gap-6 sm:flex-row"
                 >
                     <a
                         href={"#projects"}
-                        className="px-8 py-3 rounded-full border border-[#00A3FF] hover:bg-[#00A3FF]/10 text-white font-bold transition-all flex items-center justify-center gap-2"
+                        className="flex items-center justify-center gap-2 rounded-full border border-[#00A3FF] px-8 py-3 font-bold text-white transition-all hover:bg-[#00A3FF]/10"
                     >
                         Explore Work
                     </a>
 
                     <ObfuscatedMail
                         email={rawEmail}
-                        className="group flex items-center gap-2 text-white hover:text-gray-400 transition-colors font-medium cursor-pointer"
+                        className="group flex cursor-pointer items-center gap-2 font-medium text-white transition-colors hover:text-gray-400"
                     >
                         Contact Team
                         <ArrowRight
                             size={18}
-                            className="group-hover:translate-x-1 transition-transform text-[#00A3FF]"
+                            className="text-[#00A3FF] transition-transform group-hover:translate-x-1"
                         />
                     </ObfuscatedMail>
                 </motion.div>

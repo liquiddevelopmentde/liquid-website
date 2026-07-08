@@ -4,7 +4,7 @@ export const Bubbles = () => {
     const sizes: number[] = [20, 40, 60, 80];
 
     return (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
             {Array.from({length: 15}).map((_, i) => {
                 const size = sizes[i % sizes.length]!;
 

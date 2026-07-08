@@ -6,33 +6,33 @@ import type {TeamMember} from "../data/types.ts";
 
 export const TeamMemberCard = (member: TeamMember) => (
     <motion.div whileHover={{y: -5}}
-                className="group relative bg-[#121212] rounded-2xl p-6 border border-white/10 flex flex-col items-center text-center overflow-hidden shadow-lg hover:border-[#00A3FF]/40 transition-all duration-300">
+                className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-white/10 bg-[#121212] p-6 text-center shadow-lg transition-all duration-300 hover:border-[#00A3FF]/40">
         <div
-            className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         >
         </div>
         <div
-            className="absolute top-0 w-full h-1 bg-[#00A3FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+            className="absolute top-0 h-1 w-full origin-left scale-x-0 bg-[#00A3FF] transition-transform duration-500 group-hover:scale-x-100"
         >
         </div>
 
         <div
-            className="w-28 h-28 rounded-full mb-5 p-1 border-2 border-[#00A3FF]/30 group-hover:border-[#00A3FF] transition-colors relative z-10">
-            <img src={member.imageLink} alt={member.name} className="w-full h-full rounded-full object-cover bg-gray-800"/>
+            className="relative z-10 mb-5 h-28 w-28 rounded-full border-2 border-[#00A3FF]/30 p-1 transition-colors group-hover:border-[#00A3FF]">
+            <img src={member.imageLink} alt={member.name} className="h-full w-full rounded-full bg-gray-800 object-cover"/>
         </div>
 
         <div className="relative z-10 w-full">
-            <h4 className="text-xl font-bold text-white mb-1">{member.name}</h4>
-            <span className="text-sm font-mono text-gray-500 mb-4 block">@{member.nickname.toLowerCase()}</span>
+            <h4 className="mb-1 text-xl font-bold text-white">{member.name}</h4>
+            <span className="mb-4 block font-mono text-sm text-gray-500">@{member.nickname.toLowerCase()}</span>
 
-            <div className="flex gap-2 justify-center mb-6">
+            <div className="mb-6 flex justify-center gap-2">
                 {member.roles.map((roleId: number) => {
                     const roleData = ROLES.find(r => r.id === roleId);
                     if (!roleData) return null;
                     return (
                         <span
                             key={roleData.id}
-                            className="px-3 py-1 rounded-md text-xs font-bold border tracking-wider"
+                            className="rounded-md border px-3 py-1 text-xs font-bold tracking-wider"
                             style={{
                                 backgroundColor: `${roleData.bgColor}1A`,
                                 color: roleData.textColor,
@@ -45,23 +45,23 @@ export const TeamMemberCard = (member: TeamMember) => (
                 })}
             </div>
 
-            <div className="flex gap-3 justify-center w-full">
+            <div className="flex w-full justify-center gap-3">
                 {/* Obfuscated Member Mail */}
                 <ObfuscatedMail
                     email={member.email}
-                    className="flex-1 py-2 rounded-lg bg-white/5 hover:bg-[#00A3FF] hover:text-white text-gray-400 transition-all flex justify-center items-center group/icon"
+                    className="group/icon flex flex-1 items-center justify-center rounded-lg bg-white/5 py-2 text-gray-400 transition-all hover:bg-[#00A3FF] hover:text-white"
                     title="Email"
                 >
                     <Mail size={18}/>
                 </ObfuscatedMail>
 
                 <a href={member.githubLink} target="_blank" rel="noreferrer"
-                   className="flex-1 py-2 rounded-lg bg-white/5 hover:bg-[#00A3FF] hover:text-white text-gray-400 transition-all flex justify-center items-center"
+                   className="flex flex-1 items-center justify-center rounded-lg bg-white/5 py-2 text-gray-400 transition-all hover:bg-[#00A3FF] hover:text-white"
                    title="GitHub">
                     <Github size={18}/>
                 </a>
                 <a href={member.website} target="_blank" rel="noreferrer"
-                   className="flex-1 py-2 rounded-lg bg-white/5 hover:bg-[#00A3FF] hover:text-white text-gray-400 transition-all flex justify-center items-center"
+                   className="flex flex-1 items-center justify-center rounded-lg bg-white/5 py-2 text-gray-400 transition-all hover:bg-[#00A3FF] hover:text-white"
                    title="Website">
                     <Globe size={18}/>
                 </a>
