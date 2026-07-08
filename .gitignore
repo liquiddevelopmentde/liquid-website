@@ -41,6 +41,7 @@ jspm_packages/
 
 # Vite Output
 dist/
+build/
 
 # OS Files
 .DS_Store
