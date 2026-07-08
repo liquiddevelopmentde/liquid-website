@@ -26,7 +26,7 @@ export const TeamMemberCard = (member: TeamMember) => (
             <span className="text-sm font-mono text-gray-500 mb-4 block">@{member.nickname.toLowerCase()}</span>
 
             <div className="flex gap-2 justify-center mb-6">
-                {member.roles.map((roleId:Number) => {
+                {member.roles.map((roleId: number) => {
                     const roleData = ROLES.find(r => r.id === roleId);
                     if (!roleData) return null;
                     return (
