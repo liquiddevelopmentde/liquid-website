@@ -6,12 +6,8 @@ export const Team = () => (
     <section id="team" className="relative z-10 bg-gradient-to-b from-[#050505] to-black py-24">
         <div className="mx-auto max-w-7xl px-6">
             <div className="mb-16 text-center">
-                <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-                    The Team
-                </h2>
-                <p
-                    className="text-gray-400">Meet the creators.
-                </p>
+                <h2 className="mb-4 text-3xl font-bold md:text-4xl">The Team</h2>
+                <p className="text-gray-400">Meet the creators.</p>
             </div>
             <div className="mx-auto grid max-w-5xl justify-center gap-8 md:grid-cols-3">
                 {TEAM_MEMBERS.map((member, index) => (

@@ -13,23 +13,23 @@ export const Bubbles = () => {
                         key={i}
                         className="absolute rounded-full"
                         initial={{
-                            y: "120vh",
-                            x: Math.random() * 100 + "vw",
-                            opacity: 0
+                            y: '120vh',
+                            x: Math.random() * 100 + 'vw',
+                            opacity: 0,
                         }}
-                        animate={{y: "-20vh", opacity: [0, 0.7, 0]}}
+                        animate={{y: '-20vh', opacity: [0, 0.7, 0]}}
                         transition={{
                             duration: Math.random() * 10 + 15,
                             repeat: Infinity,
-                            ease: "linear",
-                            delay: Math.random() * 10
+                            ease: 'linear',
+                            delay: Math.random() * 10,
                         }}
                         style={{
                             width: `${size}px`,
                             height: `${size}px`,
                             aspectRatio: '1/1',
                             boxSizing: 'border-box',
-                            border: `${size / 5}px solid rgba(0, 163, 255, 0.6)`
+                            border: `${size / 5}px solid rgba(0, 163, 255, 0.6)`,
                         }}
                     />
                 );
