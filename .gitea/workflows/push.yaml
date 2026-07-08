@@ -1,0 +1,26 @@
+name: Push Pipeline
+
+on:
+  push:
+    branches:
+      - "development"
+      - "main"
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Format code
+        run: echo 'Formatting code...'
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build project
+        run: echo 'Building project...'
+
+  docker-compose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker compose
+        run: echo 'Docker compose...'
