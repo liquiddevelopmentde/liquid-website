@@ -1,4 +1,4 @@
-import {Github, Smartphone} from 'lucide-react';
+import {Github} from 'lucide-react';
 import {FadeInWhenVisible} from '../utils/animations.tsx';
 
 export const Projects = () => (
@@ -61,26 +61,26 @@ export const Projects = () => (
                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 
                         {/* Screenshots*/}
-                        <div className={'flex flex-row gap-5 transition-all duration-500 group-hover:gap-10'}>
+                        <div
+                            className={
+                                'flex -translate-x-10 flex-row gap-5 transition-all duration-500 group-hover:-translate-x-14 group-hover:gap-10'
+                            }
+                        >
                             <img
                                 src={'screenshot-1.webp'}
                                 alt="App Screenshot"
-                                className="h-[400px] transition-all duration-500 group-hover:-rotate-2 group-hover:scale-105"
+                                className="h-[400px] transition-all duration-500 group-hover:-rotate-3 group-hover:scale-105"
                             />
                             <img
                                 src={'screenshot-2.webp'}
                                 alt="App Screenshot"
                                 className="h-[400px] transition-all duration-500 group-hover:rotate-2 group-hover:scale-105"
                             />
-                        </div>
-
-                        {/* Soon Available Badge */}
-                        <div className="absolute bottom-6 right-6 z-30 flex transform select-none items-center gap-3 rounded-lg border border-[#00A3FF]/50 bg-black/80 p-3 shadow-lg backdrop-blur-md transition-transform duration-500 group-hover:translate-y-2">
-                            <div className="text-right">
-                                <div className="text-xs text-gray-400">Soon available on</div>
-                                <div className="text-sm font-bold text-white">iOS & Android</div>
-                            </div>
-                            <Smartphone size={24} className="text-[#00A3FF]" />
+                            <img
+                                src={'screenshot-3.webp'}
+                                alt="App Screenshot"
+                                className="h-[400px] transition-all duration-500 group-hover:-rotate-3 group-hover:scale-105"
+                            />
                         </div>
                     </div>
                 </div>
