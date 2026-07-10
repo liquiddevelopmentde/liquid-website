@@ -26,7 +26,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     {
         name: 'Felix',
         nickname: 'Flixcoo',
-        roles: [0, 1],
+        roles: [0, 2, 3],
         imageLink: 'https://github.com/flixcoo.png',
         githubLink: 'https://github.com/flixcoo',
         email: 'felix@liquid-dev.de',
@@ -35,7 +35,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     {
         name: 'Yannick',
         nickname: 'Gelbeinhalb',
-        roles: [0, 1],
+        roles: [1, 4],
         imageLink: 'https://github.com/GelbEinhalb.png',
         githubLink: 'https://github.com/GelbEinhalb',
         email: 'yannick@liquid-dev.de',
@@ -44,7 +44,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     {
         name: 'Mathis',
         nickname: 'Sneeex',
-        roles: [0, 1],
+        roles: [0, 1, 2],
         imageLink: 'https://github.com/sneeex.png',
         githubLink: 'https://github.com/sneeex',
         email: 'mathis@liquid-dev.de',
@@ -53,6 +53,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
 ];
 
 export const ROLES: Role[] = [
-    {id: 0, role: 'FOUNDER', bgColor: '#1e40af', borderColor: '#1e40af', textColor: '#60a5fa'},
-    {id: 1, role: 'DEVELOPER', bgColor: '#0284c7', borderColor: '#0284c7', textColor: '#00b8f9'},
+    {id: 0, role: 'frontend', bgColor: '#0284c7', borderColor: '#0284c7', textColor: '#00b8f9'},
+    {id: 1, role: 'backend', bgColor: '#9f1239', borderColor: '#9f1239', textColor: '#fb7185'},
+    {id: 2, role: 'ui/ux', bgColor: '#6d28d9', borderColor: '#6d28d9', textColor: '#a78bfa'},
+    {id: 3, role: 'devops', bgColor: '#065f46', borderColor: '#065f46', textColor: '#34d399'},
+    {id: 4, role: 'server admin', bgColor: '#92400e', borderColor: '#92400e', textColor: '#fbbf24'},
 ];
