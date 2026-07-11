@@ -37,7 +37,7 @@ export const Bubbles = () => {
                         height: `${bubble.size}px`,
                         aspectRatio: '1/1',
                         boxSizing: 'border-box',
-                        border: `${bubble.size / 5}px solid rgba(0, 163, 255, 0.6)`,
+                        border: `${bubble.size / 10}px solid rgba(0, 163, 255, 0.6)`,
                     }}
                 />
             ))}
