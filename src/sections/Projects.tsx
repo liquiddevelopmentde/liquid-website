@@ -33,23 +33,23 @@ export const Projects = () => (
                         </p>
 
                         {/* Github Links */}
-                        <div className={'flex gap-3'}>
+                        <div className={'flex flex-col gap-3 md:flex-row'}>
                             <a
                                 href="https://github.com/LiquidDevelopmentDE/tallee-app"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-1 text-sm font-semibold text-gray-400 transition-all duration-200 hover:scale-105"
+                                className="flex items-center justify-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-gray-400 transition-all duration-200 hover:scale-105 md:py-1"
                             >
-                                <Github className={'size-5'}></Github>
+                                <Github className={'size-4 md:size-5'}></Github>
                                 App Repository
                             </a>
                             <a
                                 href="https://github.com/LiquidDevelopmentDE/tallee-be"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-1 text-sm font-semibold text-gray-400 transition-all duration-200 hover:scale-105"
+                                className="flex items-center justify-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-gray-400 transition-all duration-200 hover:scale-105 md:py-1"
                             >
-                                <Github className={'size-5'}></Github>
+                                <Github className={'size-4 md:size-5'}></Github>
                                 Backend Repository
                             </a>
                         </div>
@@ -63,18 +63,18 @@ export const Projects = () => (
                         {/* Screenshots*/}
                         <div
                             className={
-                                'flex -translate-x-10 flex-row gap-5 transition-all duration-500 group-hover:-translate-x-14 group-hover:gap-10'
+                                'flex -translate-x-40 flex-row gap-5 transition-all duration-500 group-hover:gap-10 md:-translate-x-10 md:group-hover:-translate-x-14'
                             }
                         >
-                            <img
-                                src={'screenshot-1.webp'}
-                                alt="App Screenshot"
-                                className="h-[400px] transition-all duration-500 group-hover:-rotate-3 group-hover:scale-105"
-                            />
                             <img
                                 src={'screenshot-2.webp'}
                                 alt="App Screenshot"
                                 className="h-[400px] transition-all duration-500 group-hover:rotate-2 group-hover:scale-105"
+                            />
+                            <img
+                                src={'screenshot-1.webp'}
+                                alt="App Screenshot"
+                                className="h-[400px] transition-all duration-500 group-hover:-rotate-3 group-hover:scale-105"
                             />
                             <img
                                 src={'screenshot-3.webp'}
