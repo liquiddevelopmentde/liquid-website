@@ -1,37 +1,56 @@
 # Liquid Development Website
 
-The official portfolio website for **Liquid Development**, a German development team.
-Designed with a modern "Liquid" aesthetic using dark mode, glassmorphism, and fluid animations.
+![pnpm](https://img.shields.io/badge/pnpm-11.10.0-DC0A0A?logo=pnpm&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-3A33D1?logo=eslint)
+![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=white)
 
-## 🚀 Tech Stack
+This repository contains the React website for Liquid Development, built with React and Vite. Its deployed
+version can be found at [liquid-dev.de](https://liquid-dev.de).
 
-- **Core:** [React](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Animations:** [Framer Motion](https://www.framer.com/motion/)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Deployment:** Docker + Nginx
+## Development
 
-## 📂 Architecture
+### Requirements
 
-The project follows a modular structure for easy maintenance:
+- Node.js
+- pnpm
 
-- **`src/data/`**: Edit text, links, and team members here.
-- **`src/sections/`**: Main page blocks (Hero, Projects, Team).
-- **`src/components/`**: Reusable UI elements (Navbar, Buttons, Cards).
-- **`src/utils/`**: Animation logic.
+### Setup
 
-## 🛠️ Setup & Run
+**Install dependencies**
 
-### Local Development
+```bash
+pnpm install
+```
 
-    npm install
-    npm run dev
+**Start development server**
 
-### Docker Production
+```bash
+pnpm run dev
+```
 
-This project includes a production-ready Nginx configuration.
+Default URL: `http://localhost:5173`
 
-    # Build and start the container
-    docker compose up -d --build
+**Create a production build**
 
-The site will run on port `8081` by default.
+```bash
+pnpm run build
+```
+
+Output directory: `/build`
+
+## Production
+
+### Requirements
+
+- Docker Compose
+
+### Setup
+
+```bash
+docker compose up --build
+```
+
+Runs on Port `8084`
