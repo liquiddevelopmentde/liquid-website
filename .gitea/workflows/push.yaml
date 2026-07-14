@@ -83,8 +83,6 @@ jobs:
   build-docker:
     name: "Build with Docker"
     runs-on: ubuntu-latest
-    container:
-      image: node:22
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -92,7 +90,6 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.BOT_TOKEN }}
           ref: ${{ gitea.ref_name }}
-
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -104,5 +101,4 @@ jobs:
 
       - name: Build project
         run: docker compose build
-
 
