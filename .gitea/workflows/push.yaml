@@ -58,6 +58,7 @@ jobs:
 
   build-pnpm:
     name: "Build with pnpm"
+    needs: format
     runs-on: ubuntu-latest
     container:
       image: node:22
@@ -82,6 +83,7 @@ jobs:
 
   build-docker:
     name: "Build with Docker"
+    needs: format
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
