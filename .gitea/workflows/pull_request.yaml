@@ -1,4 +1,4 @@
-name: Pull Request Pipeline
+name: "Pull Request Pipeline"
 
 on:
   pull_request:
@@ -23,3 +23,33 @@ jobs:
 
       - name: Run ESlint
         run: pnpm lint
+
+  build-pnpm:
+    name: "Build with pnpm"
+    runs-on: ubuntu-latest
+    container:
+      image: node:22
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build project
+        run: pnpm build
+
+  build-docker:
+    name: "Build with Docker"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build project
+        run: docker compose build
