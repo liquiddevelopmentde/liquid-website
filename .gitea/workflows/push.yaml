@@ -91,14 +91,6 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
           ref: ${{ gitea.ref_name }}
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 11
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
       - name: Build project
         run: docker compose build
 
