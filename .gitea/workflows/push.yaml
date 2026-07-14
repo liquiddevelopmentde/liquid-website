@@ -10,6 +10,8 @@ jobs:
   format:
     name: "Format Code"
     runs-on: ubuntu-latest
+    container:
+      image: node:22
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -18,17 +20,10 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
           ref: ${{ gitea.ref_name }}
 
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 11
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -64,6 +59,8 @@ jobs:
   build-pnpm:
     name: "Build with pnpm"
     runs-on: ubuntu-latest
+    container:
+      image: node:22
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -72,17 +69,10 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
           ref: ${{ gitea.ref_name }}
 
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 11
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -93,6 +83,8 @@ jobs:
   build-docker:
     name: "Build with Docker"
     runs-on: ubuntu-latest
+    container:
+      image: node:22
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -106,12 +98,6 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 11
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
