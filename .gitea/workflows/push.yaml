@@ -1,4 +1,4 @@
-name: Push Pipeline
+name: "Push Pipeline"
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   format:
-    name: "Format Code"
+    name: "Format code"
     runs-on: ubuntu-latest
     container:
       image: node:22
