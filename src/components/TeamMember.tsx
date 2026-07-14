@@ -24,7 +24,7 @@ export const TeamMemberCard = (member: TeamMember) => (
             <h4 className="mb-1 text-xl font-bold text-white">{member.name}</h4>
             <span className="mb-4 block font-mono text-sm text-gray-500">@{member.nickname.toLowerCase()}</span>
 
-            <div className="mb-6 flex justify-center gap-2">
+            <div className="mb-6 flex flex-wrap justify-center gap-2">
                 {member.roles.map((roleId: number) => {
                     const roleData = ROLES.find((r) => r.id === roleId);
                     if (!roleData) return null;
@@ -38,7 +38,7 @@ export const TeamMemberCard = (member: TeamMember) => (
                                 borderColor: `${roleData.borderColor}33`,
                             }}
                         >
-                            {roleData.role}
+                            <span className={'whitespace-nowrap uppercase'}>{roleData.role}</span>
                         </span>
                     );
                 })}

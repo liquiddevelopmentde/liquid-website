@@ -3,7 +3,7 @@ import {TeamMemberCard} from '../components/TeamMember.tsx';
 import {TEAM_MEMBERS} from '../data/content.ts';
 
 export const Team = () => (
-    <section id="team" className="relative z-10 bg-gradient-to-b from-[#050505] to-black py-24">
+    <section id="team" className="relative z-10 bg-gradient-to-b from-[#050505] to-black pb-40">
         <div className="mx-auto max-w-7xl px-6">
             <div className="mb-16 text-center">
                 <h2 className="mb-4 text-3xl font-bold md:text-4xl">The Team</h2>
