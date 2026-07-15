@@ -44,7 +44,7 @@ export const Projects = () => (
                                 App Repository
                             </a>
                             <a
-                                href="https://github.com/LiquidDevelopmentDE/tallee-be"
+                                href="https://github.com/LiquidDevelopmentDE/tallee-backend"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-gray-400 transition-all duration-200 hover:scale-105 md:py-1"
