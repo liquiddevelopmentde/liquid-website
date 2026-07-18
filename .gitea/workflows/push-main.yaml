@@ -55,9 +55,24 @@ jobs:
       - name: Verify format
         run: pnpm lint
 
+  build:
+    name: "Build with Docker"
+    needs: format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.BOT_TOKEN }}
+          ref: ${{ gitea.ref_name }}
+
+      - name: Build project
+        run: docker compose build
+
   deploy:
     name: "Deploy to server"
-    needs: format
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
