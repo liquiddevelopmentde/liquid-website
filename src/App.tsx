@@ -20,7 +20,7 @@ function isSnowfallSeason(date = new Date()) {
     return date <= prevEnd;
 }
 
-export default function LiquidDevelopment() {
+const App = () => {
     return (
         <div className="min-h-screen overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
             <div
@@ -44,4 +44,6 @@ export default function LiquidDevelopment() {
             <Footer />
         </div>
     );
-}
+};
+
+export default App;
