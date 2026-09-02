@@ -24,7 +24,7 @@ function isSnowfallSeason(date = new Date()) {
 const App = () => {
     return (
         <BrowserRouter>
-            <div className="flex min-h-screen flex-col overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
+            <div className="flex h-screen min-h-screen flex-col overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
                 {/* Snow */}
                 <div
                     style={{

@@ -1,6 +1,7 @@
 import {BrandLogo} from './BrandLogo.tsx';
 import {ObfuscatedMail} from './ObfuscatedMail.tsx';
 import {SOCIALS} from '../data/content.ts';
+import {Link} from 'react-router-dom';
 
 export const Footer = () => (
     <footer id="contact" className="relative shrink-0 overflow-hidden border-t border-white/10 bg-black py-12">
@@ -43,8 +44,14 @@ export const Footer = () => (
                 })}
             </div>
         </div>
-        <div className="mt-8 text-center text-sm text-gray-600">
+        <div className="mt-8 flex flex-col justify-center gap-2 text-center text-sm text-gray-600">
             &copy; {new Date().getFullYear()} Liquid Development. All rights reserved.
+            <Link
+                className="text-center text-sm text-gray-600 underline transition-colors hover:text-gray-300"
+                to={'/legal'}
+            >
+                Legal Notice
+            </Link>
         </div>
     </footer>
 );
