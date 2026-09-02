@@ -2,9 +2,10 @@ import {Navbar} from './components/Navbar.tsx';
 import {Footer} from './components/Footer.tsx';
 
 import Snowfall from 'react-snowfall';
-import {Hero} from './sections/Hero.tsx';
-import {Projects} from './sections/Projects.tsx';
-import {Team} from './sections/Team.tsx';
+import Home from './pages/Home.tsx';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import LegalNoticePage from './pages/LegalNoticePage.tsx';
+import NotFoundPage from './pages/NotFoundPage.tsx';
 
 // Determines if the current date is within the snowfall season (November 15th to January 31st)
 function isSnowfallSeason(date = new Date()) {
@@ -22,27 +23,34 @@ function isSnowfallSeason(date = new Date()) {
 
 const App = () => {
     return (
-        <div className="min-h-screen overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
-            <div
-                style={{
-                    position: 'fixed',
-                    width: '100vw',
-                    height: '100vh',
-                    top: 0,
-                    left: 0,
-                    pointerEvents: 'none',
-                    zIndex: 9999,
-                }}
-            >
-                {isSnowfallSeason() && <Snowfall snowflakeCount={80} />}
-            </div>
+        <BrowserRouter>
+            <div className="flex h-screen min-h-screen flex-col overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
+                {/* Snow */}
+                <div
+                    style={{
+                        position: 'fixed',
+                        width: '100vw',
+                        height: '100vh',
+                        top: 0,
+                        left: 0,
+                        pointerEvents: 'none',
+                        zIndex: 9999,
+                    }}
+                >
+                    {isSnowfallSeason() && <Snowfall snowflakeCount={80} />}
+                </div>
 
-            <Navbar />
-            <Hero />
-            <Projects />
-            <Team />
-            <Footer />
-        </div>
+                <Navbar />
+                <main className="flex min-h-0 flex-1">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/impressum" element={<LegalNoticePage />} />
+                        <Route path="*" element={<NotFoundPage />} />
+                    </Routes>
+                </main>
+                <Footer />
+            </div>
+        </BrowserRouter>
     );
 };
 
