@@ -3,12 +3,9 @@ import {ArrowRight} from 'lucide-react';
 import {BrandLogo} from '../components/BrandLogo.tsx';
 import {Bubbles} from '../components/Bubbles.tsx';
 import {ObfuscatedMail} from '../components/ObfuscatedMail.tsx';
-import {SOCIALS} from '../data/content.ts';
+import {CONTACT_EMAIL} from '../data/content.ts';
 
 export const Hero = () => {
-    const emailSocial = SOCIALS.find((s) => !s.link.startsWith('http'));
-    const rawEmail = emailSocial ? emailSocial.link : 'hello@liquid-dev.de';
-
     return (
         <section id="home" className="relative flex h-screen items-center justify-center overflow-hidden pt-20">
             <div
@@ -63,7 +60,7 @@ export const Hero = () => {
                     </a>
 
                     <ObfuscatedMail
-                        email={rawEmail}
+                        email={CONTACT_EMAIL}
                         className="group flex cursor-pointer items-center gap-2 font-medium text-white transition-colors hover:text-gray-400"
                     >
                         Contact Team

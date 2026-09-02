@@ -1,8 +1,14 @@
 import {Github, Mail} from 'lucide-react';
 import {FaDiscord} from 'react-icons/fa';
-import type {Role, SocialIcon, TeamMember} from './types.ts';
+import type {NavLink, Role, SocialIcon, TeamMember} from './types.ts';
 
-export const NAV_LINKS = ['Home', 'Projects', 'Team'];
+export const CONTACT_EMAIL: string = 'hello@liquid-dev.de';
+
+export const NAV_LINKS: NavLink[] = [
+    {name: 'Home', anchor: ''},
+    {name: 'Projects', anchor: '#projects'},
+    {name: 'Team', anchor: '#team'},
+];
 
 export const SOCIALS: SocialIcon[] = [
     {
@@ -17,7 +23,7 @@ export const SOCIALS: SocialIcon[] = [
     },
     {
         name: 'E-Mail',
-        email: 'hello@liquid-dev.de',
+        email: CONTACT_EMAIL,
         icon: Mail,
     },
 ];

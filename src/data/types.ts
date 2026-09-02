@@ -1,5 +1,10 @@
 import type {IconType} from 'react-icons';
 
+export interface NavLink {
+    name: string;
+    anchor?: string;
+}
+
 export interface SocialIcon {
     name: string;
     icon: IconType;

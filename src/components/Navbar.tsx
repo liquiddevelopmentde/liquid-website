@@ -16,11 +16,11 @@ export const Navbar = () => {
                 <div className="hidden items-center gap-6 text-sm font-medium text-gray-300 md:flex">
                     {NAV_LINKS.map((item) => (
                         <Link
-                            to={`/#${item.toLowerCase()}`}
-                            key={item}
+                            to={`/${item.anchor}`}
+                            key={item.name}
                             className="text-xs uppercase tracking-wide transition-colors hover:text-[#00A3FF]"
                         >
-                            {item}
+                            {item.name}
                         </Link>
                     ))}
 
