@@ -44,14 +44,14 @@ export const Footer = () => (
                 })}
             </div>
         </div>
-        <div className="mt-8 flex flex-col justify-center gap-2 text-center text-sm text-gray-600">
-            &copy; {new Date().getFullYear()} Liquid Development. All rights reserved.
+        <div className="mt-4 flex flex-col justify-center gap-2 text-center text-sm text-gray-600">
             <Link
                 className="text-center text-sm text-gray-600 underline transition-colors hover:text-gray-300"
                 to={'/legal'}
             >
                 Legal Notice
             </Link>
+            &copy; 2021 - {new Date().getFullYear()} Liquid Development. All rights reserved.
         </div>
     </footer>
 );
