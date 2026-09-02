@@ -3,7 +3,7 @@ import {ObfuscatedMail} from './ObfuscatedMail.tsx';
 import {SOCIALS} from '../data/content.ts';
 
 export const Footer = () => (
-    <footer id="contact" className="relative z-50 mt-auto overflow-hidden border-t border-white/10 bg-black py-12">
+    <footer id="contact" className="relative shrink-0 overflow-hidden border-t border-white/10 bg-black py-12">
         <div className="absolute left-1/2 top-0 h-1 w-1/2 -translate-x-1/2 bg-[#00A3FF] opacity-50 blur-[100px]"></div>
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row">
             <div className="flex items-center gap-3">
