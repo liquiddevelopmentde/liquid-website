@@ -2,7 +2,10 @@ import {Github} from 'lucide-react';
 import {FadeInWhenVisible} from '../utils/animations.tsx';
 
 export const Projects = () => (
-    <section id="projects" className="relative z-10 overflow-hidden bg-gradient-to-b from-[#0e0e0e] to-[#050505] py-32">
+    <section
+        id="projects"
+        className="relative z-10 scroll-mt-24 overflow-hidden bg-gradient-to-b from-[#0e0e0e] to-[#050505] py-32"
+    >
         {/* Background */}
         <div className="pointer-events-none absolute right-0 top-1/4 h-1/2 w-1/2 rounded-full bg-[#00A3FF]/10 blur-[120px]"></div>
 

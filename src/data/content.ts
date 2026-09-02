@@ -5,7 +5,7 @@ import type {NavLink, Role, SocialIcon, TeamMember} from './types.ts';
 export const CONTACT_EMAIL: string = 'hello@liquid-dev.de';
 
 export const NAV_LINKS: NavLink[] = [
-    {name: 'Home', anchor: ''},
+    {name: 'Home', anchor: '#home'},
     {name: 'Projects', anchor: '#projects'},
     {name: 'Team', anchor: '#team'},
 ];

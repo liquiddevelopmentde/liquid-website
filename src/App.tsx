@@ -1,9 +1,10 @@
 import {Navbar} from './components/Navbar.tsx';
 import {Footer} from './components/Footer.tsx';
+import {useEffect} from 'react';
 
 import Snowfall from 'react-snowfall';
 import Home from './pages/Home.tsx';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes, useLocation} from 'react-router-dom';
 import LegalNoticePage from './pages/LegalNoticePage.tsx';
 import NotFoundPage from './pages/NotFoundPage.tsx';
 
@@ -21,9 +22,28 @@ function isSnowfallSeason(date = new Date()) {
     return date <= prevEnd;
 }
 
+const ScrollToHash = () => {
+    const {hash, pathname} = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const element = document.getElementById(hash.slice(1));
+            if (element) {
+                element.scrollIntoView({behavior: 'smooth', block: 'start'});
+                return;
+            }
+        }
+
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }, [hash, pathname]);
+
+    return null;
+};
+
 const App = () => {
     return (
         <BrowserRouter>
+            <ScrollToHash />
             <div className="flex h-screen min-h-screen flex-col overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
                 {/* Snow */}
                 <div

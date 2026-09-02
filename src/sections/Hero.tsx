@@ -1,11 +1,17 @@
 import {motion} from 'framer-motion';
 import {ArrowRight} from 'lucide-react';
+import type {MouseEvent} from 'react';
 import {BrandLogo} from '../components/BrandLogo.tsx';
 import {Bubbles} from '../components/Bubbles.tsx';
 import {ObfuscatedMail} from '../components/ObfuscatedMail.tsx';
 import {CONTACT_EMAIL} from '../data/content.ts';
 
 export const Hero = () => {
+    const handleExploreClick = (event: MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault();
+        document.getElementById('projects')?.scrollIntoView({behavior: 'smooth', block: 'start'});
+    };
+
     return (
         <section id="home" className="relative flex h-screen items-center justify-center overflow-hidden pt-20">
             <div
@@ -54,6 +60,7 @@ export const Hero = () => {
                 >
                     <a
                         href={'#projects'}
+                        onClick={handleExploreClick}
                         className="flex items-center justify-center gap-2 rounded-full border border-[#00A3FF] px-8 py-3 font-bold text-white transition-all hover:bg-[#00A3FF]/10"
                     >
                         Explore Work
