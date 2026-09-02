@@ -17,7 +17,7 @@ export const SOCIALS: SocialIcon[] = [
     },
     {
         name: 'E-Mail',
-        link: 'hello@liquid-dev.de',
+        email: 'hello@liquid-dev.de',
         icon: Mail,
     },
 ];

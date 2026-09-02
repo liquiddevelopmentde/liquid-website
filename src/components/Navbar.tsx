@@ -1,6 +1,7 @@
 import {BrandLogo} from './BrandLogo.tsx';
 import {NAV_LINKS, SOCIALS} from '../data/content.ts';
 import {ObfuscatedMail} from './ObfuscatedMail.tsx';
+import {Link} from 'react-router-dom';
 
 export const Navbar = () => {
     return (
@@ -14,24 +15,24 @@ export const Navbar = () => {
                 </div>
                 <div className="hidden items-center gap-6 text-sm font-medium text-gray-300 md:flex">
                     {NAV_LINKS.map((item) => (
-                        <a
+                        <Link
+                            to={`/#${item.toLowerCase()}`}
                             key={item}
-                            href={`#${item.toLowerCase()}`}
                             className="text-xs uppercase tracking-wide transition-colors hover:text-[#00A3FF]"
                         >
                             {item}
-                        </a>
+                        </Link>
                     ))}
 
                     {SOCIALS.map((social) => {
                         const Icon = social.icon;
-                        const isEmail = !social.link.startsWith('http');
+                        const isEmail = !!social.email;
 
                         if (isEmail) {
                             return (
                                 <ObfuscatedMail
                                     key={social.name}
-                                    email={social.link}
+                                    email={social.email!}
                                     className="flex items-center justify-center rounded-full bg-white/10 p-2 text-white transition-all hover:bg-[#00A3FF]"
                                     title={social.name}
                                 >

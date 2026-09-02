@@ -14,13 +14,13 @@ export const Footer = () => (
             <div className="flex gap-8">
                 {SOCIALS.map((social) => {
                     const Icon = social.icon;
-                    const isEmail = !social.link.startsWith('http');
+                    const isEmail = !!social.email;
 
                     if (isEmail) {
                         return (
                             <ObfuscatedMail
                                 key={social.name}
-                                email={social.link}
+                                email={social.email!}
                                 className="text-gray-400 transition-colors hover:text-[#00A3FF]"
                                 title={social.name}
                             >

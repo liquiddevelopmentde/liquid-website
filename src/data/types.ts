@@ -2,8 +2,9 @@ import type {IconType} from 'react-icons';
 
 export interface SocialIcon {
     name: string;
-    link: string;
     icon: IconType;
+    link?: string;
+    email?: string;
 }
 
 export interface TeamMember {
