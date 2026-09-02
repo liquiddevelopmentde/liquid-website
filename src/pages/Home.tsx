@@ -4,11 +4,11 @@ import {Projects} from '../sections/Projects.tsx';
 
 function Home() {
     return (
-        <>
+        <div className="w-full">
             <Hero />
             <Projects />
             <Team />
-        </>
+        </div>
     );
 }
 

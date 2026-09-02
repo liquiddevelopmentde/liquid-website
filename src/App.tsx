@@ -24,7 +24,7 @@ function isSnowfallSeason(date = new Date()) {
 const App = () => {
     return (
         <BrowserRouter>
-            <div className="flex h-screen min-h-screen flex-col overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
+            <div className="flex min-h-screen flex-col overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
                 {/* Snow */}
                 <div
                     style={{
@@ -41,10 +41,10 @@ const App = () => {
                 </div>
 
                 <Navbar />
-                <main className="flex min-h-0 flex-1">
+                <main className="flex-1">
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/impressum" element={<LegalNoticePage />} />
+                        <Route path="/legal" element={<LegalNoticePage />} />
                         <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                 </main>
