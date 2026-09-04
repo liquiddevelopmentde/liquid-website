@@ -7,8 +7,10 @@ const NotFoundPage = () => {
 
             <div className="relative text-center">
                 <h2 className="mb-3 text-9xl font-bold uppercase text-[#00A3FF]">404</h2>
-                <h1 className="mb-4 text-3xl font-bold tracking-tight text-white md:text-5xl">Page not found</h1>
-                <p className="mx-auto mb-10 max-w-xl text-lg text-gray-400">This page does not exist.</p>
+                <h1 className="mb-4 text-3xl font-bold tracking-tight text-white md:text-5xl">
+                    This Page has liquified
+                </h1>
+                <p className="mx-auto mb-10 max-w-xl text-lg text-gray-400">This page does not exist or moved.</p>
 
                 <Link
                     to="/"
