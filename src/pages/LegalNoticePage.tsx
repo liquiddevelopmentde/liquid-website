@@ -1,6 +1,6 @@
 const LegalNoticePage = () => {
     return (
-        <section className="relative z-10 flex min-h-full w-full items-center bg-gradient-to-b from-[#0e0e0e] to-[#050505] px-6 py-12">
+        <section className="relative z-10 flex min-h-full w-full items-center bg-gradient-to-b from-[#0e0e0e] to-[#050505] px-6 pb-5 pt-24 md:py-12">
             <div className="pointer-events-none absolute right-0 top-1/3 h-72 w-72 rounded-full bg-[#00A3FF]/10 blur-[120px]"></div>
 
             <div className="mx-auto w-full max-w-4xl rounded-3xl border border-white/10 bg-[#121212] p-8 shadow-2xl md:p-12">
