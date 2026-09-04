@@ -4,9 +4,12 @@ import {SOCIALS} from '../data/content.ts';
 import {Link} from 'react-router-dom';
 
 export const Footer = () => (
-    <footer id="contact" className="relative shrink-0 overflow-hidden border-t border-white/10 bg-black py-12">
+    <footer
+        id="contact"
+        className="relative shrink-0 overflow-hidden border-t border-white/10 bg-black pb-6 pt-8 md:py-12"
+    >
         <div className="absolute left-1/2 top-0 h-1 w-1/2 -translate-x-1/2 bg-[#00A3FF] opacity-50 blur-[100px]"></div>
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row md:gap-8">
             <div className="flex items-center gap-3">
                 <BrandLogo className="h-8 w-8 text-gray-600" />
                 <span className="font-bold text-gray-500">LIQUID DEVELOPMENT</span>

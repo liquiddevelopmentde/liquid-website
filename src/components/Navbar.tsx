@@ -7,12 +7,12 @@ export const Navbar = () => {
     return (
         <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/5 bg-[#0e0e0e]/90 backdrop-blur-xl">
             <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-                <div className="flex items-center gap-3">
+                <Link className="flex select-none items-center gap-3" to="/">
                     <BrandLogo className="h-8 w-8 text-[#00A3FF]" />
                     <span className="text-lg font-bold tracking-wider text-white md:text-xl">
                         LIQUID <span className="text-[#00A3FF]">DEVELOPMENT</span>
                     </span>
-                </div>
+                </Link>
                 <div className="hidden items-center gap-6 text-sm font-medium text-gray-300 md:flex">
                     {NAV_LINKS.map((item) => (
                         <Link
