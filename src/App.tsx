@@ -34,7 +34,7 @@ const ScrollToHash = () => {
             }
         }
 
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({top: 0, left: 0, behavior: 'instant'});
     }, [hash, pathname]);
 
     return null;
@@ -44,7 +44,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <ScrollToHash />
-            <div className="flex h-screen min-h-screen flex-col overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
+            <div className="flex min-h-screen flex-col overflow-x-hidden bg-[#0e0e0e] font-sans text-white selection:bg-[#00A3FF] selection:text-white">
                 {/* Snow */}
                 <div
                     style={{
