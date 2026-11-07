@@ -50,7 +50,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     {
         name: 'Mathis',
         nickname: 'Sneeex',
-        roles: [0, 1, 2],
+        roles: [0, 1, 2, 3],
         imageLink: 'https://github.com/sneeex.png',
         githubLink: 'https://github.com/sneeex',
         email: 'mathis@liquid-dev.de',
