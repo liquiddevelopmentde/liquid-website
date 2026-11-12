@@ -63,5 +63,5 @@ export const ROLES: Role[] = [
     {id: 1, role: 'backend', bgColor: '#9f1239', borderColor: '#9f1239', textColor: '#fb7185'},
     {id: 2, role: 'ui/ux', bgColor: '#6d28d9', borderColor: '#6d28d9', textColor: '#a78bfa'},
     {id: 3, role: 'devops', bgColor: '#065f46', borderColor: '#065f46', textColor: '#34d399'},
-    {id: 4, role: 'server admin', bgColor: '#92400e', borderColor: '#92400e', textColor: '#fbbf24'},
+    {id: 4, role: 'infrastructure', bgColor: '#92400e', borderColor: '#92400e', textColor: '#fbbf24'},
 ];
